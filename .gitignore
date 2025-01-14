@@ -1,0 +1,10 @@
+node_modules
+.vscode
+build
+build-*.zip
+.DS_Store
+.*.swo
+.*.swp
+.python-version
+.now
+.ipynb_checkpoints/
