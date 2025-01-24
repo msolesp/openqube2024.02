@@ -1237,7 +1237,7 @@ export default [
                                             Tamaño de las empresas donde trabajan las personas encuestadas.
                                         </p>
                                         <p>
-                                            Aproximadamente el 48% de las personas trabaja en empresas con menos de 200 empleados.
+                                            Aproximadamente el {charts['porcentaje_menos_de_200_empelados']}% de las personas trabaja en empresas con menos de 200 empleados.
                                         </p>
                                     </div>
                                 ),
@@ -1263,7 +1263,7 @@ export default [
                                 description: (
                                     <div>
                                         <p>
-                                            El 53% de las personas encuestadas trabaja remoto y el 39% trabaja bajo un esquema híbrido.
+                                            El {charts['porcentaje_trabajo_remoto']}% de las personas encuestadas trabaja remoto y el {charts['porcentaje_trabajo_hibrido']}% trabaja bajo un esquema híbrido.
                                         </p>
                                     </div>
                                 ),
