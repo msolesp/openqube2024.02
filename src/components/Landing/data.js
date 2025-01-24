@@ -631,6 +631,8 @@ export default [
                 <ul>
                     <li>Prefiero no decir {charts['gender_prefiero_no_decir']}%</li>
                     <li>No Binarie {charts['gender_no_binarie']}%</li>
+                    <li>Agénero {charts['gender_agenero']}%</li>
+                    <li>Lesbiana  {charts['gender_lesbiana']}%</li>
                     <li>Queer {charts['gender_queer']}%</li>
                     <li>Trans {charts['gender_trans']}%</li>
                 </ul>
@@ -1121,7 +1123,7 @@ export default [
 
                                 },
                                 caption: <p>Porcentaje de personas que tienen su sueldo dolarizado, ya sea de forma parcial o completa, y quienes no lo tienen.</p>,
-                                description: <p>El 36% de las personas tiene su sueldo dolarizado, al menos de manera parcial. Esto representa una disminución del 2% respecto a la <a href="https://sueldos.openqube.io/encuesta-sueldos-2024.01/" target="_blank" rel="noopener noreferrer">encuesta anterior</a>.</p>,
+                                description: <p>El {charts['porcentaje_sueldo_dolarizado']}% de las personas tiene su sueldo dolarizado, al menos de manera parcial. Esto representa una disminución del 2% respecto a la <a href="https://sueldos.openqube.io/encuesta-sueldos-2024.01/" target="_blank" rel="noopener noreferrer">encuesta anterior</a>.</p>,
                             },
                         ],
                     },
@@ -1142,7 +1144,7 @@ export default [
                                     isPercentual: true,
                                 },
                                 caption: <p>Porcentaje de personas que realizan guardias y de qué tipo.</p>,
-                                description: <p>Nótese que esta pregunta es opcional en la encuesta y sólo la respondió el 31% de las personas.</p>,
+                                description: <p>Nótese que esta pregunta es opcional en la encuesta y sólo la respondió el {charts['porcentaje_respondio_guardias']}% de las personas.</p>,
                             },
                         ],
                     },
@@ -1300,9 +1302,9 @@ export default [
                                 description: (
                                     <div>
                                         <p>
-                                            Sólo el 15% de quienes respondieron la encuesta está muy conforme con su empleo y no busca un cambio.
+                                            Sólo el {charts['porcentaje_muy_conforme']}% de quienes respondieron la encuesta está muy conforme con su empleo y no busca un cambio.
                                             <br />
-                                            El 20% se encuentra en búsqueda activa y el resto, abierto a escuchar ofertas.
+                                            El {charts['porcentaje_busqueda_activa']}% se encuentra en búsqueda activa y el resto, abierto a escuchar ofertas.
                                         </p>
                                     </div>
                                 ),
