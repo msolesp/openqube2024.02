@@ -150,7 +150,7 @@ export default [
                                 caption: 'Porcentaje de personas encuestadas según años de antigüedad en su compañía actual',
                                 description: (<div>
                                     <p>
-                                        Más del 53% de las personas encuestadas tiene 2 o menos años en su compañía actual.
+                                        Alrededor de {charts['years_in_company_2_or_less']}% de las personas encuestadas tiene 2 o menos años en su compañía actual.
                                     </p>
                                 </div>)
                             },
@@ -167,7 +167,7 @@ export default [
                                 description: (
                                     <div>
                                         <p>
-                                            Aproximadamente el 57% de las personas que respondieron la encuesta trabaja hace menos de 3 años en su puesto actual.
+                                            Aproximadamente el {charts['years_in_position_2_or_less']}% de las personas que respondieron la encuesta trabaja hace menos de 3 años en su puesto actual.
                                         </p>
                                     </div>
 
@@ -181,7 +181,7 @@ export default [
                 title: 'Educación',
                 content: (
                     <div>
-                        <p>Del total de respuestas consideradas, solo el {charts['ans_educ_percent']}% de lxs encuestadxs respondió la sección de educación. Esto equivale a {charts['ans_educ']} respuestas.</p>
+                        <p>Del total de respuestas consideradas, solo el {charts['ans_educ_percent']}% de las personas encuestadas respondió la sección de educación. Esto equivale a {charts['ans_educ']} respuestas.</p>
                     </div>
                 ),
                 data: [
