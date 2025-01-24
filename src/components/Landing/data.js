@@ -5,7 +5,7 @@ import historic_charts from './historic-charts';
 
 // si al momento de publicar la nueva versión de la encuesta existe un cepo cambiario y
 // un tipo de cambio desdoblado en oficial/ahorro, agregar la fecha de publicación aquí.
-const hayDolarAhorro = ['2020-02-02', '2020-08-15', '2021-02-15','2021-08-23', '2022-02-21', '2023-01-07', '2023-07-07', '2024-06-03'];
+const hayDolarAhorro = ['2020-02-02', '2020-08-15', '2021-02-15', '2021-08-23', '2022-02-21', '2023-01-07', '2023-07-07', '2024-06-03', '2024-01-14'];
 
 function sortBySalary(salaries) {
     return salaries.sort((a, b) => bestSalary(b) - bestSalary(a));
@@ -24,13 +24,13 @@ export default [
         content: (
             <div>
                 <p>
-                En OpenQube trabajamos para ofrecer información actualizada sobre empleos en el campo de tecnología de la información para que puedas acceder a ella fácilmente. ¿Cómo lo logramos? A través de nuestra plataforma colaborativa, en la que podés evaluar las empresas en las que trabajaste y ayudar a otros a tomar decisiones informadas sobre su carrera.
+                    En OpenQube trabajamos para ofrecer información actualizada sobre empleos en el campo de tecnología de la información para que puedas acceder a ella fácilmente. ¿Cómo lo logramos? A través de nuestra plataforma colaborativa, en la que podés evaluar las empresas en las que trabajaste y ayudar a otros a tomar decisiones informadas sobre su carrera.
                 </p>
                 <p>
-                Desde 2014, llevamos a cabo encuestas salariales dentro de la comunidad tecnológica y publicamos los resultados en el <a href="https://sysarmy.com.ar/blog/" target="_blank" rel="noopener noreferrer">blog de Sysarmy</a>.
+                    Desde 2014, llevamos a cabo encuestas salariales dentro de la comunidad tecnológica y publicamos los resultados en el <a href="https://sysarmy.com.ar/blog/" target="_blank" rel="noopener noreferrer">blog de Sysarmy</a>.
                 </p>
                 <p>
-                En 2019, comenzamos a analizar los resultados de estas encuestas. Nuestros informes pasados están acá:
+                    En 2019, comenzamos a analizar los resultados de estas encuestas. Nuestros informes pasados están acá:
                     <ul>
                         <li><a href="https://openqube.io/encuesta-sueldos-2019.01" target="_blank" rel="noopener noreferrer">2019.01</a></li>
                         <li><a href="https://openqube.io/encuesta-sueldos-2019.02" target="_blank" rel="noopener noreferrer">2019.02</a></li>
@@ -41,29 +41,30 @@ export default [
                         <li><a href="https://sueldos.openqube.io/encuesta-sueldos-2022.01/" target="_blank" rel="noopener noreferrer">2022.01 </a></li>
                         <li><a href="https://sueldos.openqube.io/encuesta-sueldos-2023.01/" target="_blank" rel="noopener noreferrer">2023.01 </a></li>
                         <li><a href="https://sueldos.openqube.io/encuesta-sueldos-2023.02/" target="_blank" rel="noopener noreferrer">2023.02 </a></li>
+                        <li><a href="https://sueldos.openqube.io/encuesta-sueldos-2024.01/" target="_blank" rel="noopener noreferrer">2024.01 </a></li>
                     </ul>
                 </p>
                 <p>
-                Con la intención de presentar a nuestra comunidad los resultados de forma más accesible, seleccionamos algunos datos estadísticos que consideramos relevantes. Para una mejor comprensión de los mismos, recomendamos leer el apartado de <a href="#Metodologia">Metodología</a>.
+                    Con la intención de presentar a nuestra comunidad los resultados de forma más accesible, seleccionamos algunos datos estadísticos que consideramos relevantes. Para una mejor comprensión de los mismos, recomendamos leer el apartado de <a href="#Metodologia">Metodología</a>.
                 </p>
                 <p>
-                    A continuación te mostramos los resultados del nuevo análisis para mayo - junio 2024.
+                    A continuación te mostramos los resultados del nuevo análisis para diciembre 2024 - enero 2025.
                 </p>
                 <br />
                 <div className='authors-wrapper'>
-                    <left>    
+                    <left>
                         <small>
-                        El presente informe fue realizado para openqube por <a className='author-name' href='https://www.linkedin.com/in/mar%C3%ADa-sol-espain-641ba013b/' target="_blank" rel="noopener noreferrer">Sol Espain</a> y <a className='author-name' href='https://linktr.ee/rodrigofdiaz' target="_blank" rel="noopener noreferrer">Rodrigo Díaz</a>.
+                            El presente informe fue realizado para openqube por <a className='author-name' href='https://www.linkedin.com/in/mar%C3%ADa-sol-espain-641ba013b/' target="_blank" rel="noopener noreferrer">Sol Espain</a> y <a className='author-name' href='https://linktr.ee/rodrigofdiaz' target="_blank" rel="noopener noreferrer">Rodrigo Díaz</a>.
                         </small>
                     </left>
                     <p>
-                    <hr size="8px" color="black" />
+                        <hr size="8px" color="black" />
                     </p>
                     <small>
                         (basado en los trabajos previos de <a className='author-name' href='https://www.linkedin.com/in/nadiakazlauskas/' target="_blank" rel="noopener noreferrer">Nadia Kazlauskas</a>, <a className='author-name' href='https://www.linkedin.com/in/fernandezpablo85/' target="_blank" rel="noopener noreferrer">Pablo Fernandez</a>, <a className='author-name' href='https://twitter.com/luscastro' target="_blank" rel="noopener noreferrer">Luciana Castro</a>, <a className='author-name' href='https://twitter.com/gerardobort' target="_blank" rel="noopener noreferrer">Gerardo Bort</a>, <a className='author-name' href='https://ar.linkedin.com/in/pcasas' target="_blank" rel="noopener noreferrer">Pablo Casas</a>, <a className='author-name' href='https://ar.linkedin.com/in/leonardo-genzano-1b275193/' target="_blank" rel="noopener noreferrer">Leonardo Genzano</a>, <a className='author-name' href='https://twitter.com/cocodibuja' target="_blank" rel="noopener noreferrer">Nico Quiroz</a>, <a className='author-name' href='https://twitter.com/larilopezcalvo' target="_blank" rel="noopener noreferrer">Lara López Calvo</a> y <a className='author-name' href='https://www.linkedin.com/in/benitezjuanm/' target="_blank" rel="noopener noreferrer">Juan Manuel Benítez</a>)
                     </small>
                     <a href="https://sysar.my/discord" target="_blank" rel="noopener noreferrer">
-                        <img src="https://i.postimg.cc/66HPZDtf/discord-683x90.jpg" style={{ "margin-top": "20px", width: "100%", height: "auto"}}></img>
+                        <img src="https://i.postimg.cc/66HPZDtf/discord-683x90.jpg" style={{ "margin-top": "20px", width: "100%", height: "auto" }}></img>
                     </a>
                 </div>
             </div>
@@ -89,14 +90,14 @@ export default [
                             {  // tab
                                 title: 'Geografía',
                                 component: 'MapArgentina', // graph
-                                props: { ...charts['regions_percent'], isPercentual: true},
+                                props: { ...charts['regions_percent'], isPercentual: true },
                                 caption: 'Mapa de participación en la encuesta por regiones del país.',
                                 description: 'La intensidad del color es sólo representativa.',
                             },
                             {  // tab
                                 title: 'Nivel de participación',
                                 component: 'Barh', // graph
-                                props: { ...charts['regions_percent'], isPercentual: true},
+                                props: { ...charts['regions_percent'], isPercentual: true },
                                 caption: 'Porcentaje de participantes de la encuesta por región del país.',
                             },
                         ],
@@ -133,8 +134,8 @@ export default [
                                 caption: 'Porcentaje de personas encuestadas según años de experiencia en la profesión.',
                                 description: (<p>En esta sección, los datos fueron agrupados por rangos de años, en conjuntos arbitrarios.
                                     <br>
-                                </br>
-                                Se observan valores similares a los de la <a href="https://sueldos.openqube.io/encuesta-sueldos-2023.02/" target="_blank" rel="noopener noreferrer">encuesta anterior</a>.
+                                    </br>
+                                    Se observan valores similares a los de la <a href="https://sueldos.openqube.io/encuesta-sueldos-2024.01/" target="_blank" rel="noopener noreferrer">encuesta anterior</a>.
                                 </p>)
                             },
                         ],
@@ -148,9 +149,9 @@ export default [
                                 props: { ...charts['experience_years_in_company'], isPercentual: true },
                                 caption: 'Porcentaje de personas encuestadas según años de antigüedad en su compañía actual',
                                 description: (<div>
-                                        <p>
-                                            Más del 57% de las personas encuestadas tiene 2 o menos años en su compañía actual.
-                                        </p>
+                                    <p>
+                                        Más del 53% de las personas encuestadas tiene 2 o menos años en su compañía actual.
+                                    </p>
                                 </div>)
                             },
                         ],
@@ -164,12 +165,12 @@ export default [
                                 props: { ...charts['experience_years_in_position'], isPercentual: true },
                                 caption: 'Porcentaje de personas encuestadas según años de antigüedad en su puesto actual.',
                                 description: (
-                                <div>
-                                <p>
-                                    Aproximadamente el 60% de las personas que respondieron la encuesta trabaja hace menos de 3 años en su puesto actual.
-                                </p>
-                                </div>
-                                
+                                    <div>
+                                        <p>
+                                            Aproximadamente el 57% de las personas que respondieron la encuesta trabaja hace menos de 3 años en su puesto actual.
+                                        </p>
+                                    </div>
+
                                 )
                             },
                         ],
@@ -195,10 +196,10 @@ export default [
                                 description: (
                                     <div>
                                         <p>
-                                            Aproximadamente el 30% de las personas encuestadas no ha finalizado estudios universitarios. La tendencia se mantiene respecto de la <a href="https://sueldos.openqube.io/encuesta-sueldos-2023.02/" target="_blank" rel="noopener noreferrer">encuesta anterior</a>.
+                                            Aproximadamente el 30% de las personas encuestadas no ha finalizado estudios universitarios. La tendencia se mantiene respecto de la <a href="https://sueldos.openqube.io/encuesta-sueldos-2024.01/" target="_blank" rel="noopener noreferrer">encuesta anterior</a>.
                                         </p>
-                                
-                                </div>
+
+                                    </div>
                                 )
                             },
                         ],
@@ -209,7 +210,7 @@ export default [
                             { // tab
                                 title: 'Carreras',
                                 component: 'Barh',
-                                props: { ...charts['careeres_percent'], isPercentual: true, cutoff: 15},
+                                props: { ...charts['careeres_percent'], isPercentual: true, cutoff: 15 },
                                 caption: '',
                                 description: (<div>
                                     <p>
@@ -254,7 +255,7 @@ export default [
                             },
                         ],
                     },
-                
+
                 ],
             },
             { // sub-category
@@ -278,7 +279,7 @@ export default [
                                 props: { ...charts['demographics_gender_absolute_all'], isPercentual: false },
                                 description: <div>
                                     <p > Representatividad (en valor absoluto) según identidad de género</p>
-                                   
+
                                 </div>,
                             },
                         ],
@@ -302,6 +303,7 @@ export default [
                         <p>Gracias a que contamos con resultados de encuestas anteriores, podemos medir la evolución de ciertos indicadores a lo largo del tiempo.</p>
                         <p>En el caso de los salarios en Argentina, es de particular interés conocer su evolución, debido a las continuas fluctuaciones de la moneda y la inflación.</p>
                         <p>En los siguientes gráficos podremos observar cómo han cambiado las medianas salariales y compararlas con su valor correspondiente en dólares según la cotización de cada período.</p>
+                        <p>En esta edición incorporamos un análisis adicional que ajusta los salarios históricos a pesos constantes, teniendo en cuenta la inflación de cada período. Esto nos permite observar la evolución del poder adquisitivo real de los salarios a lo largo del tiempo.</p>
                     </div>
                 ),
                 data: [
@@ -314,10 +316,22 @@ export default [
                                 props: { ...historic_charts['historic_salary_medians'], xDataKey: 'publish_date', yDataKeys: ['Pesos Argentinos'], currency: 'AR$' },
                                 caption: <p>Serie histórica de salarios en ARS basada en encuestas anteriores de sysarmy.</p>,
                                 description: <p>
-                                    Observando la tendencia histórica, es inevitable notar el marcado aumento en la pendiente de la curva durante el último año. Desde julio de 2023 hasta junio de 2024 se registró en la República Argentina una inflación de <a target="_blank" rel="noopener noreferrer" href="https://calculadoradeinflacion.com/argentina.html?md=julio&ad=2023&mh=junio&ah=2024&q=100"> 255%</a> según el <a target="_blank" rel="noopener noreferrer" href="https://www.indec.gob.ar/">INDEC</a>. Según los datos históricos de esta encuesta, en aproximadamente el mismo intervalo de tiempo, la mediana salarial aumentó un 240%.
+                                    Desde junio de 2024 hasta enero de 2025 se registró en la República Argentina una inflación de <a target="_blank" rel="noopener noreferrer" href="https://calculadoradeinflacion.com/argentina.html?md=julio&ad=2023&mh=junio&ah=2024&q=100"> 27%</a> según el <a target="_blank" rel="noopener noreferrer" href="https://www.indec.gob.ar/">INDEC</a>. Según los datos históricos de esta encuesta, en aproximadamente el mismo intervalo de tiempo, la mediana salarial aumentó un 32%.
                                     <br></br>
                                     <br></br>
-                                    Este fenómeno se debe únicamente al aumento en la inflación y tristemente no se ve acompañado por una mejora en el poder adquisitivo, tal como se puede ver en las pestañas que ajustan contra el dólar.
+                                </p>,
+                            },
+                            {  // tab
+                                title: 'Salarios en AR$ constantes ajustados por IPC',
+                                component: 'Line', // graph
+                                props: { ...historic_charts['historic_salary_medians'], xDataKey: 'publish_date', yDataKeys: ['Pesos Argentinos Constantes Ajustados Por Inflación'], currency: 'AR$' },
+                                caption: <p>Serie histórica de salarios en ARS constantes basada en encuestas anteriores de sysarmy.</p>,
+                                description: <p>
+                                    Este gráfico muestra los salarios ajustados a pesos constantes, es decir, considerando la inflación acumulada en cada período. Esto permite comparar el poder adquisitivo real de los salarios a lo largo del tiempo, eliminando el efecto de la inflación.
+                                    Un aumento en los valores indica una mejora en el poder adquisitivo real, mientras que una disminución refleja que los salarios, aunque nominalmente puedan haber crecido, no han acompañado el ritmo de la inflación, resultando en una pérdida de capacidad de compra.
+                                    Para más detalle, ver la <a href="#Metodologia">Metodología</a>.
+                                    <br></br>
+                                    <br></br>
                                 </p>,
                             },
                             {  // tab
@@ -364,7 +378,7 @@ export default [
                                         Un dato importante a tener en cuenta a la hora de evaluar nuestro sueldo es considerar la capacidad de ahorro .
                                     </p>
                                     <p>
-                                    Como en cada entrega de nuestros informes, siempre aparece alguna variación inesperada que puede resultar de interés para el lector.
+                                        Como en cada entrega de nuestros informes, siempre aparece alguna variación inesperada que puede resultar de interés para el lector.
                                         En esta oportunidad el desdoblamiento del dólar continúa siendo protagonista, con la particularidad que a diferencia de años anteriores
                                         existe tanto un cepo cambiario, así como también un precio único (mínimo al día de hoy) para ahorrar en dólares.</p>
                                 </div>,
@@ -393,7 +407,7 @@ export default [
                                 caption: 'Mediana salarial según sueldos dolarizados y experiencia.',
                                 description: <div>
                                     <p>
-                                        Las medianas salariales para las diferentes experiencias varían entre un 21% y un 62% según si el sueldo se encuentra (al menos en una parte) dolarizado o no. Para más detalle ver <a href="#Metodologia">Metodología</a>.
+                                        Las medianas salariales para las diferentes experiencias varían entre un XX% y un XX% según si el sueldo se encuentra (al menos en una parte) dolarizado o no. Para más detalle ver <a href="#Metodologia">Metodología</a>.
                                     </p>
                                     <p>
                                         En <a href="#Trabajo-Tipos-de-contrato-Que-porcentaje-tiene-su-sueldo-dolarizado">este gráfico</a> se muestra el porcentaje de personas que gozan de este beneficio.
@@ -442,10 +456,10 @@ export default [
                                 },
                                 caption: 'Mediana salarial por rol y años de experiencia en el puesto.',
                                 description: <div>
-                                     <p>El seniority aquí mencionado refiere a años de experiencia en el rol. Las medianas en <span style={{ "color": "#AAA", "font-weight": "bold" }}>GRIS</span> no son confiables y deben ser tomadas con cuidado. Para más detalle ver <a href="#Metodologia">Metodología</a>.</p>
+                                    <p>El seniority aquí mencionado refiere a años de experiencia en el rol. Las medianas en <span style={{ "color": "#AAA", "font-weight": "bold" }}>GRIS</span> no son confiables y deben ser tomadas con cuidado. Para más detalle ver <a href="#Metodologia">Metodología</a>.</p>
                                 </div>,
                             },
-                            
+
                         ],
                     },
                 ],
@@ -470,14 +484,14 @@ export default [
                                     currency: 'AR$',
                                     markNegativeValues: ['No Dolarizado', 'Dolarizado'],
                                     individualNegatives: true,
-                                    
+
                                 },
                                 caption: 'Mediana salarial por nivel de educación formal alcanzado y según dolarización del sueldo.',
                                 description: <div>
-                                    <p>Las medianas en <span style={{ "color": "#AAA", "font-weight": "bold" }}>GRIS</span> no son confiables y deben ser tomadas con cuidado. Para más detalle ver <a href="#Metodologia">Metodología</a>.</p>   
+                                    <p>Las medianas en <span style={{ "color": "#AAA", "font-weight": "bold" }}>GRIS</span> no son confiables y deben ser tomadas con cuidado. Para más detalle ver <a href="#Metodologia">Metodología</a>.</p>
                                 </div>
                             },
-                            
+
                         ],
                     },
                     {  // section
@@ -495,7 +509,7 @@ export default [
                                 caption: 'Mediana salarial por carrera y años de experiencia.',
                                 description: <div>
                                     <p>En este gráfico hemos incluído únicamente las personas que completaron sus estudios universitarios.</p>
-                                    <p>Las medianas en <span style={{ "color": "#AAA", "font-weight": "bold" }}>GRIS</span> no son confiables y deben ser tomadas con cuidado. Para más detalle ver <a href="#Metodologia">Metodología</a>.</p> 
+                                    <p>Las medianas en <span style={{ "color": "#AAA", "font-weight": "bold" }}>GRIS</span> no son confiables y deben ser tomadas con cuidado. Para más detalle ver <a href="#Metodologia">Metodología</a>.</p>
                                     <p>Más sobre la representatividad de la muestra en el apartado <a href="#Metodologia">Metodología</a>.</p>
                                 </div>,
                             },
@@ -558,9 +572,9 @@ export default [
                                 },
                                 caption: 'Mediana salarial según plataformas y años de experiencia.',
                                 description: <div>
-                                <p>Se muestra por defecto las plataformas más utilizadas, cuya cantidad de menciones supere el umbral de 0,5%.</p>
-                                <p>Las medianas en <span style={{ "color": "#AAA", "font-weight": "bold" }}>GRIS</span> no son confiables y deben ser tomadas con cuidado. Para más detalle ver <a href="#Metodologia">Metodología</a>.</p>
-                            </div>
+                                    <p>Se muestra por defecto las plataformas más utilizadas, cuya cantidad de menciones supere el umbral de 0,5%.</p>
+                                    <p>Las medianas en <span style={{ "color": "#AAA", "font-weight": "bold" }}>GRIS</span> no son confiables y deben ser tomadas con cuidado. Para más detalle ver <a href="#Metodologia">Metodología</a>.</p>
+                                </div>
                             },
                         ],
                     },
@@ -580,9 +594,9 @@ export default [
                                 },
                                 caption: 'Mediana salarial según lenguaje de programación años de experiencia.',
                                 description: <div>
-                                <p>Se muestra por defecto los lenguajes de programación más utilizadas, cuya cantidad de menciones supere el umbral de 0,5%.</p>
-                                <p>Las medianas en <span style={{ "color": "#AAA", "font-weight": "bold" }}>GRIS</span> no son confiables y deben ser tomadas con cuidado. Para más detalle ver <a href="#Metodologia">Metodología</a>.</p>
-                            </div>
+                                    <p>Se muestra por defecto los lenguajes de programación más utilizadas, cuya cantidad de menciones supere el umbral de 0,5%.</p>
+                                    <p>Las medianas en <span style={{ "color": "#AAA", "font-weight": "bold" }}>GRIS</span> no son confiables y deben ser tomadas con cuidado. Para más detalle ver <a href="#Metodologia">Metodología</a>.</p>
+                                </div>
                             },
                             {  // tab
                                 title: 'Para salarios dolarizados',
@@ -597,9 +611,9 @@ export default [
                                 },
                                 caption: 'Mediana salarial según lenguaje de programación años de experiencia.',
                                 description: <div>
-                                <p>Se muestra por defecto los lenguajes de programación más utilizadas, cuya cantidad de menciones supere el umbral de 0,5%.</p>
-                                <p>Las medianas en <span style={{ "color": "#AAA", "font-weight": "bold" }}>GRIS</span> no son confiables y deben ser tomadas con cuidado. Para más detalle ver <a href="#Metodologia">Metodología</a>.</p>
-                            </div>
+                                    <p>Se muestra por defecto los lenguajes de programación más utilizadas, cuya cantidad de menciones supere el umbral de 0,5%.</p>
+                                    <p>Las medianas en <span style={{ "color": "#AAA", "font-weight": "bold" }}>GRIS</span> no son confiables y deben ser tomadas con cuidado. Para más detalle ver <a href="#Metodologia">Metodología</a>.</p>
+                                </div>
                             },
                         ],
                     },
@@ -611,29 +625,26 @@ export default [
         title: 'Género',
         content: (
             <div>
-                <p>En esta edición la pregunta sobre identidad de género es de tipo texto libre. Esta modalidad visibiliza la pluralidad de identidades, no replicando categorías hegemónicas históricamente sostenidas. Por otra parte, se puede lograr un análisis más aproximado a las diferentes vivencias individuales en el cruce de variables. </p>
+                <p>A diferencia de las ediciones previas a 2024, en esta edición la pregunta sobre identidad de género es de tipo texto libre. Como resultado, el número de respuestas que suelen incluirse dentro de la categoría "Prefiero no decir" disminuyó respecto a ediciones anteriores. Para más detalles, revisar la <a href="#Metodologia">Metodología</a>.</p>
                 <p>Si bien en este apartado mantuvimos la lógica general del informe de no incluir dentro de los gráficos los conjuntos que tuvieron una representación menor al 1% de la muestra, mencionamos aquellas identidades de género que están subrepresentadas en esta encuesta, hecho que refleja inequidades por múltiples barreras e injusticias sociales. </p>
-                <p>Porcentajes de identidades de género menores al 1%: </p>
+                <p>Porcentajes de identidades de género menores al 1%: - FALTA ACTUALIZAR AL 2025-</p>
                 <ul>
-                    <li>Prefiero no decir 0,6%</li>
-                    <li>No Binarie 0,4%</li>
+                    <li>Prefiero no decir 0,9%</li>
+                    <li>No Binarie 0,5%</li>
+                    <li>Queer 0,2%</li>
                     <li>Trans 0,1%</li>
-                    <li>Agénero 0,1%</li>
-                    <li>Mujer Trans 0,04%</li>
-                    <li>Lesbiana 0,02%</li>
-                    <li>Gay 0,02%</li>
                 </ul>
                 <p>Como es de esperar, las inequidades históricas y sistemáticas por género, se sostienen.</p>
 
-                <h4>Algunos datos</h4>
+                <h4>Algunos datos - FALTA ACTUALIZAR AL 2025</h4>
                 <ol>
                     <li>De las personas que participaron en la encuesta y respondieron a este ítem, aproximadamente el 80% son hombres cis, mientras que alrededor del 19% son mujeres cis. </li>
                     <li>Se observa un incremento de aproximadamente un 2% en la participación de mujeres en comparación con el período anterior.</li>
                     <li>Según los datos recopilados, la brecha salarial entre hombres cis y mujeres cis se acentúa a medida que aumentan los años de experiencia de la población encuestada.</li>
                     <li>Es importante notar que, a pesar de tener logros académicos destacados entre las mujeres cis, la brecha salarial persiste en todos los niveles.</li>
-                    
+
                 </ol>
-            </div>  
+            </div>
         ),
         data: [
             { // sub-category
@@ -656,7 +667,7 @@ export default [
                                 props: { ...charts['demographics_gender_absolute'], isPercentual: false },
                                 description: <div>
                                     <p > Representatividad (en valor absoluto) según identidad de género</p>
-                                   
+
                                 </div>,
                             },
                         ],
@@ -675,11 +686,11 @@ export default [
                                 props: { ...charts['gender_gap'], isPercentual: false },
                                 title: '',
                                 caption: (
-                                <div>
-                                    <br>
-                                    </br>
-                                     Media salarial por género y seniority.
-                                </div>
+                                    <div>
+                                        <br>
+                                        </br>
+                                        Media salarial por género y seniority.
+                                    </div>
                                 ),
                                 description: <div>
                                     <p>Se observa que la brecha salarial entre Hombres Cis y Mujeres Cis aumenta con la experiencia.</p>
@@ -687,9 +698,9 @@ export default [
                             },
                         ],
                     },
-                    
+
                 ],
-               
+
             },
             { // sub-category
                 title: 'Progresión histórica',
@@ -698,7 +709,7 @@ export default [
                         title: 'Histórico de nivel de participación',
                         data: [
                             {  // tab
-                                
+
                                 component: 'Area', // graph
                                 props: {
                                     data: Object.values(
@@ -718,10 +729,10 @@ export default [
                                 },
                                 caption: 'Serie de tiempo de porcentaje de participación por género basada en encuestas anteriores.',
                             },
-                            
-                            
-                            
-                            
+
+
+
+
                         ],
                     },
                     {  // section
@@ -752,9 +763,9 @@ export default [
                                     Se observa la evolución salarial por género en pesos argentinos.
                                     <p>
                                     </p>
-                                    Actualmente, por cada peso que gana un hombre cis, una mujer cis gana aproximadamente 80 centavos.
+                                    Actualmente, por cada peso que gana un hombre cis, una mujer cis gana aproximadamente 82 centavos.
                                     <p>
-                                    Al analizar el gráfico, es importante tener en cuenta que el 0,6% de las personas de la muestra prefirieron no decir su género.
+                                        Al analizar el gráfico, es importante tener en cuenta que el 0,9% de las personas de la muestra prefirieron no decir su género.
                                     </p>
 
                                 </div>),
@@ -785,7 +796,7 @@ export default [
                                     <p>
                                     </p>
                                     <p>
-                                    Al analizar el gráfico, es importante tener en cuenta que el 0,6% de las personas de la muestra prefirieron no decir su género.
+                                        Al analizar el gráfico, es importante tener en cuenta que el 0,6% de las personas de la muestra prefirieron no decir su género.
                                     </p>
 
                                 </div>),
@@ -816,7 +827,7 @@ export default [
                                     <p>
                                     </p>
                                     <p>
-                                    Al analizar el gráfico, es importante tener en cuenta que el 0,6% de las personas de la muestra prefirieron no decir su género.
+                                        Al analizar el gráfico, es importante tener en cuenta que el 0,6% de las personas de la muestra prefirieron no decir su género.
                                     </p>
 
                                 </div>),
@@ -888,7 +899,7 @@ export default [
                                     xDataKey: 'name',
                                     yDataKeys: ['Hombre Cis', 'Mujer Cis'],
                                     currency: 'AR$',
-                                    
+
                                 },
                                 caption: 'Mediana salarial por género, según años de experiencia.',
                                 description: (<div>
@@ -907,7 +918,7 @@ export default [
                                 props: {
                                     data: charts['experience_gender_percent'].data,
                                     xDataKey: 'name',
-                                    yDataKeys: ['Hombre Cis','Mujer Cis'],
+                                    yDataKeys: ['Hombre Cis', 'Mujer Cis'],
                                     isPercentual: true,
                                 },
                                 caption: 'Nivel de participación por género, según años de experiencia.',
@@ -954,19 +965,16 @@ export default [
                                     isPercentual: true,
                                     isLogScale: false,
                                 },
-                                caption: 'Mediana de porcentaje de ajustes por inflación acumulados en el 2023 por género.',
+                                caption: 'Mediana de porcentaje de ajustes por inflación acumulados por género.',
                                 description: <>
                                     <p>
-                                        Como contraste, la inflación publicada por el <a href="https://www.indec.gob.ar/" target="_blank" rel="noopener noreferrer">INDEC</a> desde enero 2024 hasta junio 2024 fue de <strong>72%</strong>.
+                                        Como contraste, la inflación publicada por el <a href="https://www.indec.gob.ar/" target="_blank" rel="noopener noreferrer">INDEC</a> para el año 2024 fue de <strong>118%</strong>.
                                     </p>
                                     <p>
-                                    Aquellas personas que se identifican como Hombres Cis tuvieron la misma mediana de ajuste salarial que las Mujeres Cis.
-                                    </p>
-                                    <p>
-                                    <small>
-                                        Es importante tomar este numero con ciudado ya que en muchos casos no es posible distinguir si el sueldo está o no dolarizado y posiblemente existan
-                                        casos donde, por tratarse de un sueldo dolarizado, no hubo ajustes por inflación.
-                                        </small>    
+                                        <small>
+                                            Es importante tomar este numero con ciudado ya que en muchos casos no es posible distinguir si el sueldo está o no dolarizado y posiblemente existan
+                                            casos donde, por tratarse de un sueldo dolarizado, no hubo ajustes por inflación.
+                                        </small>
                                     </p>
                                 </>,
                             },
@@ -988,7 +996,7 @@ export default [
                             },
                         ],
                     },
-                    
+
                 ],
             },
         ],
@@ -1067,7 +1075,7 @@ export default [
                             {  // tab
                                 title: '',
                                 component: 'Barh', // graph
-                                props: { ...charts['herramientas_ia'], isPercentual: true, isLogScale: false},
+                                props: { ...charts['herramientas_ia'], isPercentual: true, isLogScale: false },
                                 caption: 'Nivel de aplicación de las herramientas de IA en su trabajo',
                                 description: <div>
                                     <p>Los valores son porcentuales sobre el total de participantes.</p>
@@ -1095,7 +1103,7 @@ export default [
                                 caption: 'Porcentaje de tipos de contrato de trabajo..',
                             },
                         ],
-                    },{
+                    }, {
                         title: '¿Qué porcentaje tiene su sueldo dolarizado?',
                         data: [
                             { // tab
@@ -1104,16 +1112,16 @@ export default [
                                 props: {
                                     data: charts['sueldo_dolarizado_percent'].data.map(val => ({
                                         ...val,
-                                        name: (val.name === 'nan' ? 'No dolarizado' : 
-                                               val.name === 'Cobro parte del salario en dólares' ? 'Parcialmente dolarizado' :
-                                               val.name === 'Cobro todo el salario en dólares' ? '100% dolarizado'
-                                               : 'Dolarizado pero cobra en ARS'),
+                                        name: (val.name === 'nan' ? 'No dolarizado' :
+                                            val.name === 'Cobro parte del salario en dólares' ? 'Parcialmente dolarizado' :
+                                                val.name === 'Cobro todo el salario en dólares' ? '100% dolarizado'
+                                                    : 'Dolarizado pero cobra en ARS'),
                                     })),
                                     isPercentual: true,
-                                    
+
                                 },
                                 caption: <p>Porcentaje de personas que tienen su sueldo dolarizado, ya sea de forma parcial o completa, y quienes no lo tienen.</p>,
-                                description: <p>El 38% de las personas tiene su sueldo dolarizado, al menos de manera parcial. Esto representa un incremento del 4% respecto a la <a href="https://sueldos.openqube.io/encuesta-sueldos-2023.02/" target="_blank" rel="noopener noreferrer">encuesta anterior</a>.</p>,
+                                description: <p>El 36% de las personas tiene su sueldo dolarizado, al menos de manera parcial. Esto representa una disminución del 2% respecto a la <a href="https://sueldos.openqube.io/encuesta-sueldos-2024.01/" target="_blank" rel="noopener noreferrer">encuesta anterior</a>.</p>,
                             },
                         ],
                     },
@@ -1126,10 +1134,10 @@ export default [
                                 props: {
                                     data: charts['guardias'].data.map(val => ({
                                         ...val,
-                                        name: (val.name === 'No' ? 'Sin guardias' : 
-                                               val.name === 'Sí, pasiva' ? 'Guardias pasivas' :
-                                               val.name === 'Sí, activa'? 'Guardias activas' :
-                                               'Otro'),
+                                        name: (val.name === 'No' ? 'Sin guardias' :
+                                            val.name === 'Sí, pasiva' ? 'Guardias pasivas' :
+                                                val.name === 'Sí, activa' ? 'Guardias activas' :
+                                                    'Otro'),
                                     })),
                                     isPercentual: true,
                                 },
@@ -1150,13 +1158,13 @@ export default [
                                     isLogScale: false,
                                 },
                                 caption: 'Para este análisis nos quedamos con el top 10 de los salarios más altos. Esto responde la pregunta de ¿cuánto ganan los que más ganan por rol? Los valores de la mediana son expresados en Pesos Argentinos.',
-                                description:'Se abre por cada rol la cantidad de casos encontrados en la encuesta, tomando como mínimo 5, y mostrando el porcentaje de personas que tienen el sueldo dolarizado (% dolarizado en el grafico).'
+                                description: 'Se abre por cada rol la cantidad de casos encontrados en la encuesta, tomando como mínimo 5, y mostrando el porcentaje de personas que tienen el sueldo dolarizado (% dolarizado en el grafico).'
                             },
                         ],
                     },
-                    
+
                 ],
-            }, 
+            },
             { // sub-category
                 title: 'Compensación',
                 data: [
@@ -1167,9 +1175,9 @@ export default [
                                 title: '',
                                 component: 'Barh', // graph
                                 props: { ...charts['recibis_algun_tipo_de_bono'], isPercentual: true },
-                                caption:<p>Porcentaje de participantes que han recibido o no, bonos como parte de la compensación. El <strong>
-                                {parseFloat(charts['recibe_algun_tipo_de_bono'].data.map(item => item.value)*100).toFixed(1)}</strong>% de quienes respondieron la encuesta reciben algún tipo de bono</p>
-                            
+                                caption: <p>Porcentaje de participantes que han recibido o no, bonos como parte de la compensación. El <strong>
+                                    {parseFloat(charts['recibe_algun_tipo_de_bono'].data.map(item => item.value) * 100).toFixed(1)}</strong>% de quienes respondieron la encuesta reciben algún tipo de bono</p>
+
                             },
                         ],
                     },
@@ -1195,14 +1203,14 @@ export default [
                                 caption: <div>
                                     <p>Los rangos (eje vertical) representan el porcentaje de ajuste o aumento por inflación recibido en el año. La longitud de las barras representa el porcentaje de personas que recibieron ajustes dentro de ese rango.</p>
                                 </div>,
-                                description:(
+                                description: (
                                     <div>
-                                        Inflación acumulada en 2024: <strong>72%</strong>.
+                                        Inflación acumulada en 2024: <strong>118%</strong>.
                                         <p>
-                                        <small>
-                                        Es importante tomar este número con ciudado, ya que en muchos casos no es posible distinguir si el sueldo está dolarizado o no y posiblemente existan
-                                        casos donde, al tratarse de un sueldo dolarizado, no sufrió ajustes por inflación.
-                                        </small>    
+                                            <small>
+                                                Es importante tomar este número con ciudado, ya que en muchos casos no es posible distinguir si el sueldo está dolarizado o no y posiblemente existan
+                                                casos donde, al tratarse de un sueldo dolarizado, no sufrió ajustes por inflación.
+                                            </small>
                                         </p>
                                     </div>
                                 )
@@ -1221,13 +1229,13 @@ export default [
                                 title: '',
                                 component: 'Barh', // graph
                                 props: { ...charts['cantidad_de_personas_en_tu_organizacion'], isPercentual: true },
-                                description:(
+                                description: (
                                     <div>
                                         <p>
-                                        Tamaño de las empresas donde trabajan las personas encuestadas.
+                                            Tamaño de las empresas donde trabajan las personas encuestadas.
                                         </p>
                                         <p>
-                                        Aproximadamente el 48% de las personas trabaja en empresas con menos de 200 empleados.
+                                            Aproximadamente el 48% de las personas trabaja en empresas con menos de 200 empleados.
                                         </p>
                                     </div>
                                 ),
@@ -1243,17 +1251,17 @@ export default [
                                 props: {
                                     data: charts['modalidad_trabajo'].data.map(val => ({
                                         ...val,
-                                        name: (val.name === '100% remoto' ? 'Remoto' : 
-                                               val.name === '100% presencial' ? 'Presencial' 
-                                               : 'Híbrido'),
+                                        name: (val.name === '100% remoto' ? 'Remoto' :
+                                            val.name === '100% presencial' ? 'Presencial'
+                                                : 'Híbrido'),
                                     })),
                                     isPercentual: true,
-                                    
+
                                 },
-                                description:(
+                                description: (
                                     <div>
                                         <p>
-                                        El 57% de las personas encuestadas trabaja remoto y el 36% trabaja bajo un esquema híbrido.
+                                            El 53% de las personas encuestadas trabaja remoto y el 39% trabaja bajo un esquema híbrido.
                                         </p>
                                     </div>
                                 ),
@@ -1282,26 +1290,26 @@ export default [
                                 props: {
                                     data: charts['busqueda_trabajo'].data.map(val => ({
                                         ...val,
-                                        name: (val.name === 'No, estoy muy conforme.' ? 'No busca' : 
-                                               val.name === 'Sí, estoy buscando activamente.' ? 'En búsqueda activa' 
-                                               : 'Escuchando propuestas'),
+                                        name: (val.name === 'No, estoy muy conforme.' ? 'No busca' :
+                                            val.name === 'Sí, estoy buscando activamente.' ? 'En búsqueda activa'
+                                                : 'Escuchando propuestas'),
                                     })),
                                     isPercentual: true,
-                                    
+
                                 },
-                                description:(
+                                description: (
                                     <div>
                                         <p>
-                                        Sólo el 17% de quienes respondieron la encuesta está muy conforme con su empleo y no busca un cambio.
-                                        <br/>
-                                        El 18% se encuentra en búsqueda activa y el resto, abierto a escuchar ofertas.
+                                            Sólo el 15% de quienes respondieron la encuesta está muy conforme con su empleo y no busca un cambio.
+                                            <br />
+                                            El 20% se encuentra en búsqueda activa y el resto, abierto a escuchar ofertas.
                                         </p>
                                     </div>
                                 ),
                             },
                         ],
                     },
-                      
+
                 ],
             },
         ],
@@ -1332,6 +1340,14 @@ export default [
                 <p>
                     La mediana de los salarios, para los datos de la encuesta, suele estar levemente por debajo del valor promedio.
                 </p>
+
+                <h4>Evolución de los salarios en pesos constantes ajustados por IPC</h4>
+                <p>
+                    Los salarios históricos se ajustaron a pesos constantes utilizando el Índice de Precios al Consumidor (IPC) publicado por el INDEC, lo que permite eliminar el efecto de la inflación y analizar la evolución del poder adquisitivo real.
+                    Para ello, se definió un período base (mes anterior a la publicación de la encuesta) y se aplicó el IPC como coeficiente de ajuste a cada salario histórico, convirtiéndolo a valores equivalentes en términos de precios actuales.
+                    El detalle sobre cómo utilizar este índice se encuentra en <a target="_blank" rel="noopener noreferrer" href="https://www.indec.gob.ar/ftp/cuadros/economia/como_usar_indice_precios_2022.pdf">en este documento oficial de INDEC.</a>
+
+                </p>
                 <h5>Valores atípicos</h5>
                 <p>
                     Muchos salarios ingresados no se corresponden necesariamente con datos reales.  Esto puede ser debido a errores de tipeo, no entendimiento de la pregunta, o simplemente intencionales.
@@ -1343,10 +1359,10 @@ export default [
                 </p>
                 <h5>Medianas salariales no confiables</h5>
                 <p>
-                Para evaluar la confiabilidad de las medianas salariales de cada grupo reportado, se calculó el <a target="_blank" rel="noopener noreferrer" href="https://es.wikipedia.org/wiki/Intervalo_de_confianza">Intervalo de Confianza</a> del 95% para la mediana y se consideró confiable si dicho intervalo no supera el 50% de la mediana.
+                    Para evaluar la confiabilidad de las medianas salariales de cada grupo reportado, se calculó el <a target="_blank" rel="noopener noreferrer" href="https://es.wikipedia.org/wiki/Intervalo_de_confianza">Intervalo de Confianza</a> del 95% para la mediana y se consideró confiable si dicho intervalo no supera el 50% de la mediana.
                 </p>
                 <p>
-                Por ejemplo, una mediana de 1.200.000 con un intervalo de confianza del 95% entre 1.000.000 y 1.400.000 se considera confiable, ya que el ancho del intervalo (400.000) representa solo un 33% de la mediana. En cambio, si el intervalo de confianza estuviera entre 850.000 y 1.550.000, la consideraríamos no confiable, ya que el ancho del intervalo representa un 58% de la mediana.  
+                    Por ejemplo, una mediana de 1.200.000 con un intervalo de confianza del 95% entre 1.000.000 y 1.400.000 se considera confiable, ya que el ancho del intervalo (400.000) representa solo un 33% de la mediana. En cambio, si el intervalo de confianza estuviera entre 850.000 y 1.550.000, la consideraríamos no confiable, ya que el ancho del intervalo representa un 58% de la mediana.
                 </p>
                 <h5>Cotización del dólar</h5>
                 <p>
@@ -1382,6 +1398,9 @@ export default [
                 <p>
                     Para abordar este problema, quienes preparamos este informe escribimos una serie de reglas basadas en <a target="_blank" rel="noopener noreferrer" href="https://es.wikipedia.org/wiki/Expresión_regular">expresiones regulares</a> para normalizar los valores y también reducir la dimensionalidad.
                 </p>
+                <h5>Género</h5>
+                <p>Las respuestas al campo de género solían presentar varias irregularidades ya que en todas las ediciones las personas encuestadas tenían la posibilidad de escribir texto libre, y muchas solían hacerlo en tono gracioso o enojado. Todas estas respuestas eran agrupadas en la categoría "Prefiero no decir". Entonces, esa categoría no solo representaba a las personas que explícitamente decían no querer expresar su género, sino también a aquellas que completaron cosas sin sentido.</p>
+                <p>Este último grupo tendía a aumentar cuando se ofrecían todas las opciones de diversidad de género (con la posibilidad de también escribir texto libre). El nuevo formato de esta pregunta (solo texto libre), produjo un marcado descenso en este tipo de respuestas, ayudándonos a tener una mejor aproximación al número de personas que prefieren no identificarse.</p>
                 <h4>Series temporales</h4>
                 <h5>Salarios</h5>
                 <p>
@@ -1405,10 +1424,10 @@ export default [
                     Para advertir al lector de estos casos, hemos grisado en todos los gráficos posibles aquellos segmentos cuya representatividad no supere el umbral de 0,5%, tanto gráficos de barras horizontales como series históricas.
                 </p>
                 <h4>Repositorios</h4>
-                
+
                 <a target="_blank" rel="noopener noreferrer" href="https://github.com/openqube/openqube-sueldos">Acá encontraran toda la información para recrear los análisis, los google colab de Python utilizados, y los datos tanto los originales como los limpios para que puedan replicar y realizar nuevos análisis.</a>
-                    
-                
+
+
                 <h4>Análisis previos</h4>
                 <ul>
                     <li><a target="_blank" rel="noopener noreferrer" href="https://openqube.io/encuesta-sueldos-2019.01">Resultados de la encuesta de sueldos 2019.01</a></li>
