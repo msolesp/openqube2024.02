@@ -629,16 +629,16 @@ export default [
                 <p>Si bien en este apartado mantuvimos la lógica general del informe de no incluir dentro de los gráficos los conjuntos que tuvieron una representación menor al 1% de la muestra, mencionamos aquellas identidades de género que están subrepresentadas en esta encuesta, hecho que refleja inequidades por múltiples barreras e injusticias sociales. </p>
                 <p>Porcentajes de identidades de género menores al 1%: - FALTA ACTUALIZAR AL 2025-</p>
                 <ul>
-                    <li>Prefiero no decir 0,9%</li>
-                    <li>No Binarie 0,5%</li>
-                    <li>Queer 0,2%</li>
-                    <li>Trans 0,1%</li>
+                    <li>Prefiero no decir {charts['gender_prefiero_no_decir']}%</li>
+                    <li>No Binarie {charts['gender_no_binarie']}%</li>
+                    <li>Queer {charts['gender_queer']}%</li>
+                    <li>Trans {charts['gender_trans']}%</li>
                 </ul>
                 <p>Como es de esperar, las inequidades históricas y sistemáticas por género, se sostienen.</p>
 
                 <h4>Algunos datos - FALTA ACTUALIZAR AL 2025</h4>
                 <ol>
-                    <li>De las personas que participaron en la encuesta y respondieron a este ítem, aproximadamente el 80% son hombres cis, mientras que alrededor del 19% son mujeres cis. </li>
+                    <li>De las personas que participaron en la encuesta y respondieron a este ítem, aproximadamente el {charts['gender_hombre_cis']}% son hombres cis, mientras que alrededor del {charts['gender_mujer_cis']}% son mujeres cis. </li>
                     <li>Se observa un incremento de aproximadamente un 2% en la participación de mujeres en comparación con el período anterior.</li>
                     <li>Según los datos recopilados, la brecha salarial entre hombres cis y mujeres cis se acentúa a medida que aumentan los años de experiencia de la población encuestada.</li>
                     <li>Es importante notar que, a pesar de tener logros académicos destacados entre las mujeres cis, la brecha salarial persiste en todos los niveles.</li>
