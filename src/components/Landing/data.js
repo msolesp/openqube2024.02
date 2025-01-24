@@ -150,7 +150,7 @@ export default [
                                 caption: 'Porcentaje de personas encuestadas según años de antigüedad en su compañía actual',
                                 description: (<div>
                                     <p>
-                                        Más del 53% de las personas encuestadas tiene 2 o menos años en su compañía actual.
+                                        El {parseFloat(charts['years_in_company_2_or_less'].data.map(item => item.value) * 100).toFixed(1)}% de las personas encuestadas tiene 2 o menos años en su compañía actual.
                                     </p>
                                 </div>)
                             },
@@ -167,7 +167,7 @@ export default [
                                 description: (
                                     <div>
                                         <p>
-                                            Aproximadamente el 57% de las personas que respondieron la encuesta trabaja hace menos de 3 años en su puesto actual.
+                                            El {parseFloat(charts['years_in_position_2_or_less'].data.map(item => item.value) * 100).toFixed(1)}% de las personas que respondieron la encuesta trabaja hace menos de 3 años en su puesto actual.
                                         </p>
                                     </div>
 
@@ -181,7 +181,7 @@ export default [
                 title: 'Educación',
                 content: (
                     <div>
-                        <p>Del total de respuestas consideradas, solo el {charts['ans_educ_percent']}% de lxs encuestadxs respondió la sección de educación. Esto equivale a {charts['ans_educ']} respuestas.</p>
+                        <p>Del total de respuestas consideradas, solo el {charts['ans_educ_percent']}% de las personas encuestadas respondió la sección de educación. Esto equivale a {charts['ans_educ']} respuestas.</p>
                     </div>
                 ),
                 data: [
@@ -627,19 +627,19 @@ export default [
             <div>
                 <p>A diferencia de las ediciones previas a 2024, en esta edición la pregunta sobre identidad de género es de tipo texto libre. Como resultado, el número de respuestas que suelen incluirse dentro de la categoría "Prefiero no decir" disminuyó respecto a ediciones anteriores. Para más detalles, revisar la <a href="#Metodologia">Metodología</a>.</p>
                 <p>Si bien en este apartado mantuvimos la lógica general del informe de no incluir dentro de los gráficos los conjuntos que tuvieron una representación menor al 1% de la muestra, mencionamos aquellas identidades de género que están subrepresentadas en esta encuesta, hecho que refleja inequidades por múltiples barreras e injusticias sociales. </p>
-                <p>Porcentajes de identidades de género menores al 1%: - FALTA ACTUALIZAR AL 2025-</p>
+                <p>Porcentajes de identidades de género menores al 1%:</p>
                 <ul>
-                    <li>Prefiero no decir 0,9%</li>
-                    <li>No Binarie 0,5%</li>
-                    <li>Queer 0,2%</li>
-                    <li>Trans 0,1%</li>
+                    <li>Prefiero no decir {parseFloat(charts['gender_prefiero_no_decir'].data.map(item => item.value) * 100).toFixed(1)}%</li>
+                    <li>No Binarie {parseFloat(charts['gender_no_binarie'].data.map(item => item.value) * 100).toFixed(1)}%</li>
+                    <li>Queer {parseFloat(charts['gender_queer'].data.map(item => item.value) * 100).toFixed(1)}%</li>
+                    <li>Trans {parseFloat(charts['gender_trans'].data.map(item => item.value) * 100).toFixed(1)}%</li>
                 </ul>
                 <p>Como es de esperar, las inequidades históricas y sistemáticas por género, se sostienen.</p>
 
-                <h4>Algunos datos - FALTA ACTUALIZAR AL 2025</h4>
+                <h4>Algunos datos</h4>
                 <ol>
-                    <li>De las personas que participaron en la encuesta y respondieron a este ítem, aproximadamente el 80% son hombres cis, mientras que alrededor del 19% son mujeres cis. </li>
-                    <li>Se observa un incremento de aproximadamente un 2% en la participación de mujeres en comparación con el período anterior.</li>
+                    <li>De las personas que participaron en la encuesta y respondieron a este ítem, el {parseFloat(charts['gender_hombre_cis'].data.map(item => item.value) * 100).toFixed(1)}% son hombres cis, mientras que {parseFloat(charts['gender_mujer_cis'].data.map(item => item.value) * 100).toFixed(1)}% son mujeres cis.</li>
+                    <li>Se observan valores similares al período anterior.</li>
                     <li>Según los datos recopilados, la brecha salarial entre hombres cis y mujeres cis se acentúa a medida que aumentan los años de experiencia de la población encuestada.</li>
                     <li>Es importante notar que, a pesar de tener logros académicos destacados entre las mujeres cis, la brecha salarial persiste en todos los niveles.</li>
 
@@ -765,7 +765,7 @@ export default [
                                     </p>
                                     Actualmente, por cada peso que gana un hombre cis, una mujer cis gana aproximadamente 82 centavos.
                                     <p>
-                                        Al analizar el gráfico, es importante tener en cuenta que el 0,9% de las personas de la muestra prefirieron no decir su género.
+                                        Al analizar el gráfico, es importante tener en cuenta que el {parseFloat(charts['gender_prefiero_no_decir'].data.map(item => item.value) * 100).toFixed(1)}% de las personas de la muestra prefirieron no decir su género.
                                     </p>
 
                                 </div>),
@@ -1121,7 +1121,7 @@ export default [
 
                                 },
                                 caption: <p>Porcentaje de personas que tienen su sueldo dolarizado, ya sea de forma parcial o completa, y quienes no lo tienen.</p>,
-                                description: <p>El 36% de las personas tiene su sueldo dolarizado, al menos de manera parcial. Esto representa una disminución del 2% respecto a la <a href="https://sueldos.openqube.io/encuesta-sueldos-2024.01/" target="_blank" rel="noopener noreferrer">encuesta anterior</a>.</p>,
+                                description: <p>El {parseFloat(charts['porcentaje_sueldo_dolarizado'].data.map(item => item.value) * 100).toFixed(1)}%  de las personas tiene su sueldo dolarizado, al menos de manera parcial. Esto representa una disminución del 2% respecto a la <a href="https://sueldos.openqube.io/encuesta-sueldos-2024.01/" target="_blank" rel="noopener noreferrer">encuesta anterior</a>.</p>,
                             },
                         ],
                     },
@@ -1142,7 +1142,7 @@ export default [
                                     isPercentual: true,
                                 },
                                 caption: <p>Porcentaje de personas que realizan guardias y de qué tipo.</p>,
-                                description: <p>Nótese que esta pregunta es opcional en la encuesta y sólo la respondió el 31% de las personas.</p>,
+                                description: <p>Nótese que esta pregunta es opcional en la encuesta y sólo la respondió el {charts['porcentaje_respondio_guardias']}% de las personas.</p>,
                             },
                         ],
                     },
@@ -1235,7 +1235,7 @@ export default [
                                             Tamaño de las empresas donde trabajan las personas encuestadas.
                                         </p>
                                         <p>
-                                            Aproximadamente el 48% de las personas trabaja en empresas con menos de 200 empleados.
+                                            El {charts['porcentaje_menos_de_200_empelados']}% de las personas trabaja en empresas con menos de 200 empleados.
                                         </p>
                                     </div>
                                 ),
@@ -1261,7 +1261,7 @@ export default [
                                 description: (
                                     <div>
                                         <p>
-                                            El 53% de las personas encuestadas trabaja remoto y el 39% trabaja bajo un esquema híbrido.
+                                            El {charts["porcentaje_trabajo_remoto"]}% de las personas encuestadas trabaja remoto y el {charts["porcentaje_trabajo_hibrido"]}% trabaja bajo un esquema híbrido.
                                         </p>
                                     </div>
                                 ),
@@ -1300,9 +1300,9 @@ export default [
                                 description: (
                                     <div>
                                         <p>
-                                            Sólo el 15% de quienes respondieron la encuesta está muy conforme con su empleo y no busca un cambio.
+                                            Sólo el {charts["porcentaje_muy_conforme"]}% de quienes respondieron la encuesta está muy conforme con su empleo y no busca un cambio.
                                             <br />
-                                            El 20% se encuentra en búsqueda activa y el resto, abierto a escuchar ofertas.
+                                            El {charts["porcentaje_busqueda_activa"]}% se encuentra en búsqueda activa y el resto, abierto a escuchar ofertas.
                                         </p>
                                     </div>
                                 ),
