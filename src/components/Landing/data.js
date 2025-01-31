@@ -327,10 +327,9 @@ export default [
                                 props: { ...historic_charts['historic_salary_medians'], xDataKey: 'publish_date', yDataKeys: ['Pesos Argentinos Constantes Ajustados Por Inflación'], currency: 'AR$' },
                                 caption: <p>Serie histórica de salarios en ARS constantes basada en encuestas anteriores de sysarmy.</p>,
                                 description: <p>
-                                    Este gráfico muestra los salarios ajustados a pesos constantes, es decir, considerando la inflación acumulada en cada período. Esto permite comparar el poder adquisitivo real de los salarios a lo largo del tiempo, eliminando el efecto de la inflación.
-                                    Un aumento en los valores indica una mejora en el poder adquisitivo real, mientras que una disminución refleja que los salarios, aunque nominalmente puedan haber crecido, no han acompañado el ritmo de la inflación, resultando en una pérdida de capacidad de compra.
-                                    Para más detalle, ver la <a href="#Metodologia">Metodología</a>.
-                                    <br></br>
+                                    Este gráfico muestra los salarios ajustados a pesos constantes de enero de 2025, es decir, considerando la inflación acumulada en cada período.
+                                    Esto permite comparar el poder adquisitivo real de los salarios a lo largo del tiempo, eliminando el efecto de la inflación.
+                                    Un aumento en los valores indica una mejora en el poder adquisitivo real, mientras que una disminución refleja que los salarios, aunque nominalmente puedan haber crecido, no han acompañado el ritmo de la inflación, resultando en una pérdida de capacidad de compra. Para más detalle, ver la <a href="#Metodologia">Metodología</a>.
                                     <br></br>
                                 </p>,
                             },
@@ -810,7 +809,7 @@ export default [
                                     <p>
                                     </p>
                                     <p>
-                                        Al analizar el gráfico, es importante tener en cuenta que el 0,6% de las personas de la muestra prefirieron no decir su género.
+                                        Al analizar el gráfico, es importante tener en cuenta que el {parseFloat(charts['gender_prefiero_no_decir'].data.map(item => item.value) * 100).toFixed(1)}% de las personas de la muestra prefirieron no decir su género.
                                     </p>
 
                                 </div>),
@@ -841,7 +840,7 @@ export default [
                                     <p>
                                     </p>
                                     <p>
-                                        Al analizar el gráfico, es importante tener en cuenta que el 0,6% de las personas de la muestra prefirieron no decir su género.
+                                        Al analizar el gráfico, es importante tener en cuenta que el {parseFloat(charts['gender_prefiero_no_decir'].data.map(item => item.value) * 100).toFixed(1)}% de las personas de la muestra prefirieron no decir su género.
                                     </p>
 
                                 </div>),
