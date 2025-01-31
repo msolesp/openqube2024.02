@@ -316,7 +316,7 @@ export default [
                                 props: { ...historic_charts['historic_salary_medians'], xDataKey: 'publish_date', yDataKeys: ['Pesos Argentinos'], currency: 'AR$' },
                                 caption: <p>Serie histórica de salarios en ARS basada en encuestas anteriores de sysarmy.</p>,
                                 description: <p>
-                                    Desde junio de 2024 hasta enero de 2025 se registró en la República Argentina una inflación de <a target="_blank" rel="noopener noreferrer" href="https://calculadoradeinflacion.com/argentina.html?md=julio&ad=2023&mh=junio&ah=2024&q=100"> 27%</a> según el <a target="_blank" rel="noopener noreferrer" href="https://www.indec.gob.ar/">INDEC</a>. Según los datos históricos de esta encuesta, en aproximadamente el mismo intervalo de tiempo, la mediana salarial aumentó un 32%.
+                                    Desde junio de 2024 hasta enero de 2025 se registró en la República Argentina una inflación de <a target="_blank" rel="noopener noreferrer" href="https://calculadoradeinflacion.com/argentina.html?md=julio&ad=2023&mh=junio&ah=2024&q=100"> 27%</a> según el <a target="_blank" rel="noopener noreferrer" href="https://www.indec.gob.ar/">INDEC</a>. Según los datos históricos de esta encuesta, en aproximadamente el mismo intervalo de tiempo, la mediana salarial aumentó un 34%.
                                     <br></br>
                                     <br></br>
                                 </p>,
@@ -383,6 +383,18 @@ export default [
                                         existe tanto un cepo cambiario, así como también un precio único (mínimo al día de hoy) para ahorrar en dólares.</p>
                                 </div>,
                             },
+                            {  // tab
+                                title: 'Salarios en US$ (MEP)',
+                                component: 'Line', // graph
+                                props: { ...historic_charts['historic_salary_medians'], xDataKey: 'publish_date', yDataKeys: ['Dólares Estadounidenses MEP'], currency: 'US$' },
+                                caption: <p>Serie histórica de salarios sobre cotización del dólar MEP, en Pesos Argentinos.</p>,
+                                description: <div>
+                                    <p>A partir de este informe incluimos las medianas salariales en Dólar MEP, ya que hoy en día es el tipo de cambio al que la mayoría de las personas puede acceder
+                                        fácilmente para convertir sus ingresos en pesos a dólares. Este cálculo se muestra únicamente desde 2020, porque fue a partir de ese
+                                        año que los bonos utilizados para esta operatoria comenzaron a ser consistentes y ampliamente aceptados, permitiéndonos contar con una cotización más clara y homogénea.
+                                    </p>
+                                </div>,
+                            },
                         ],
                     },
                 ],
@@ -407,7 +419,7 @@ export default [
                                 caption: 'Mediana salarial según sueldos dolarizados y experiencia.',
                                 description: <div>
                                     <p>
-                                        Las medianas salariales para las diferentes experiencias varían entre un XX% y un XX% según si el sueldo se encuentra (al menos en una parte) dolarizado o no. Para más detalle ver <a href="#Metodologia">Metodología</a>.
+                                        Las medianas salariales para las diferentes experiencias varían entre un {charts["dif_dolarizado_min"]}% y un {charts["dif_dolarizado_max"]}% según si el sueldo se encuentra (al menos en una parte) dolarizado o no. Para más detalle ver <a href="#Metodologia">Metodología</a>.
                                     </p>
                                     <p>
                                         En <a href="#Trabajo-Tipos-de-contrato-Que-porcentaje-tiene-su-sueldo-dolarizado">este gráfico</a> se muestra el porcentaje de personas que gozan de este beneficio.
@@ -625,7 +637,7 @@ export default [
         title: 'Género',
         content: (
             <div>
-                <p>A diferencia de las ediciones previas a 2024, en esta edición la pregunta sobre identidad de género es de tipo texto libre. Como resultado, el número de respuestas que suelen incluirse dentro de la categoría "Prefiero no decir" disminuyó respecto a ediciones anteriores. Para más detalles, revisar la <a href="#Metodologia">Metodología</a>.</p>
+                <p>En esta edición la pregunta sobre identidad de género es de tipo texto libre. Como resultado, el número de respuestas que suelen incluirse dentro de la categoría "Prefiero no decir" disminuyó respecto a ediciones anteriores. Para más detalles, revisar la <a href="#Metodologia">Metodología</a>.</p>
                 <p>Si bien en este apartado mantuvimos la lógica general del informe de no incluir dentro de los gráficos los conjuntos que tuvieron una representación menor al 1% de la muestra, mencionamos aquellas identidades de género que están subrepresentadas en esta encuesta, hecho que refleja inequidades por múltiples barreras e injusticias sociales. </p>
                 <p>Porcentajes de identidades de género menores al 1%:</p>
                 <ul>
@@ -633,12 +645,14 @@ export default [
                     <li>No Binarie {parseFloat(charts['gender_no_binarie'].data.map(item => item.value) * 100).toFixed(1)}%</li>
                     <li>Queer {parseFloat(charts['gender_queer'].data.map(item => item.value) * 100).toFixed(1)}%</li>
                     <li>Trans {parseFloat(charts['gender_trans'].data.map(item => item.value) * 100).toFixed(1)}%</li>
+                    <li>Lesbiana {parseFloat(charts['gender_lesbiana'].data.map(item => item.value) * 100).toFixed(2)}%</li>
+                    <li>Agénero {parseFloat(charts['gender_agenero'].data.map(item => item.value) * 100).toFixed(2)}%</li>
                 </ul>
                 <p>Como es de esperar, las inequidades históricas y sistemáticas por género, se sostienen.</p>
 
                 <h4>Algunos datos</h4>
                 <ol>
-                    <li>De las personas que participaron en la encuesta y respondieron a este ítem, el {parseFloat(charts['gender_hombre_cis'].data.map(item => item.value) * 100).toFixed(1)}% son hombres cis, mientras que {parseFloat(charts['gender_mujer_cis'].data.map(item => item.value) * 100).toFixed(1)}% son mujeres cis.</li>
+                    <li>De las personas que participaron en la encuesta y respondieron a este ítem, el {parseFloat(charts['gender_hombre_cis'].data.map(item => item.value) * 100).toFixed(0)}% son hombres cis, mientras que {parseFloat(charts['gender_mujer_cis'].data.map(item => item.value) * 100).toFixed(0)}% son mujeres cis.</li>
                     <li>Se observan valores similares al período anterior.</li>
                     <li>Según los datos recopilados, la brecha salarial entre hombres cis y mujeres cis se acentúa a medida que aumentan los años de experiencia de la población encuestada.</li>
                     <li>Es importante notar que, a pesar de tener logros académicos destacados entre las mujeres cis, la brecha salarial persiste en todos los niveles.</li>
@@ -831,7 +845,7 @@ export default [
                                     </p>
 
                                 </div>),
-                            }
+                            },
                         ],
                     },
                     {  // section
@@ -1366,7 +1380,7 @@ export default [
                 </p>
                 <h5>Cotización del dólar</h5>
                 <p>
-                    Para el cálculo de salarios dolarizados, tomamos la cotización intradiaria promedio de Bloomberg y tomamos la mediana del valor del día de publicación con un delta de 5 días.
+                    Para el cálculo de salarios dolarizados, tomamos la cotización intradiaria promedio de Bloomberg y tomamos la mediana del valor del día de publicación con un delta de 5 días. En el caso del dólar MEP, la cotización proviene de la serie histórica publicada por Ámbito Financiero.
                 </p>
                 <h4>Experiencia</h4>
                 <p>Para los gráficos en los cuales mencionamos experiencia o seniority, hemos agrupado los datos relevados en tres grandes grupos: </p>
