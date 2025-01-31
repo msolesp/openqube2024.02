@@ -64,7 +64,7 @@ export default [
                         (basado en los trabajos previos de <a className='author-name' href='https://www.linkedin.com/in/nadiakazlauskas/' target="_blank" rel="noopener noreferrer">Nadia Kazlauskas</a>, <a className='author-name' href='https://www.linkedin.com/in/fernandezpablo85/' target="_blank" rel="noopener noreferrer">Pablo Fernandez</a>, <a className='author-name' href='https://twitter.com/luscastro' target="_blank" rel="noopener noreferrer">Luciana Castro</a>, <a className='author-name' href='https://twitter.com/gerardobort' target="_blank" rel="noopener noreferrer">Gerardo Bort</a>, <a className='author-name' href='https://ar.linkedin.com/in/pcasas' target="_blank" rel="noopener noreferrer">Pablo Casas</a>, <a className='author-name' href='https://ar.linkedin.com/in/leonardo-genzano-1b275193/' target="_blank" rel="noopener noreferrer">Leonardo Genzano</a>, <a className='author-name' href='https://twitter.com/cocodibuja' target="_blank" rel="noopener noreferrer">Nico Quiroz</a>, <a className='author-name' href='https://twitter.com/larilopezcalvo' target="_blank" rel="noopener noreferrer">Lara López Calvo</a> y <a className='author-name' href='https://www.linkedin.com/in/benitezjuanm/' target="_blank" rel="noopener noreferrer">Juan Manuel Benítez</a>)
                     </small>
                     <a href="https://sysar.my/discord" target="_blank" rel="noopener noreferrer">
-                        <img src="https://i.postimg.cc/66HPZDtf/discord-683x90.jpg" style={{ "margin-top": "20px", width: "100%", height: "auto" }}></img>
+                        <img src="/discord-683x90.jpg" style={{ "margin-top": "20px", width: "100%", height: "auto" }}></img>
                     </a>
                 </div>
             </div>
@@ -150,7 +150,7 @@ export default [
                                 caption: 'Porcentaje de personas encuestadas según años de antigüedad en su compañía actual',
                                 description: (<div>
                                     <p>
-                                        El {parseFloat(charts['years_in_company_2_or_less'].data.map(item => item.value) * 100).toFixed(1)}% de las personas encuestadas tiene 2 o menos años en su compañía actual.
+                                        Aproximadamente, el {parseFloat(charts['years_in_company_2_or_less'].data.map(item => item.value) * 100).toFixed(0)}% de las personas encuestadas tiene 2 o menos años en su compañía actual.
                                     </p>
                                 </div>)
                             },
@@ -167,7 +167,7 @@ export default [
                                 description: (
                                     <div>
                                         <p>
-                                            El {parseFloat(charts['years_in_position_2_or_less'].data.map(item => item.value) * 100).toFixed(1)}% de las personas que respondieron la encuesta trabaja hace menos de 3 años en su puesto actual.
+                                            Aproximadamente, el {parseFloat(charts['years_in_position_2_or_less'].data.map(item => item.value) * 100).toFixed(0)}% de las personas que respondieron la encuesta trabaja hace menos de 3 años en su puesto actual.
                                         </p>
                                     </div>
 
@@ -652,7 +652,7 @@ export default [
 
                 <h4>Algunos datos</h4>
                 <ol>
-                    <li>De las personas que participaron en la encuesta y respondieron a este ítem, el {parseFloat(charts['gender_hombre_cis'].data.map(item => item.value) * 100).toFixed(0)}% son hombres cis, mientras que {parseFloat(charts['gender_mujer_cis'].data.map(item => item.value) * 100).toFixed(0)}% son mujeres cis.</li>
+                    <li>De las personas que participaron en la encuesta y respondieron a este ítem, aproximadamente el {parseFloat(charts['gender_hombre_cis'].data.map(item => item.value) * 100).toFixed(0)}% son hombres cis, mientras que el {parseFloat(charts['gender_mujer_cis'].data.map(item => item.value) * 100).toFixed(0)}% son mujeres cis.</li>
                     <li>Se observan valores similares al período anterior.</li>
                     <li>Según los datos recopilados, la brecha salarial entre hombres cis y mujeres cis se acentúa a medida que aumentan los años de experiencia de la población encuestada.</li>
                     <li>Es importante notar que, a pesar de tener logros académicos destacados entre las mujeres cis, la brecha salarial persiste en todos los niveles.</li>
@@ -1135,7 +1135,7 @@ export default [
 
                                 },
                                 caption: <p>Porcentaje de personas que tienen su sueldo dolarizado, ya sea de forma parcial o completa, y quienes no lo tienen.</p>,
-                                description: <p>El {parseFloat(charts['porcentaje_sueldo_dolarizado'].data.map(item => item.value) * 100).toFixed(1)}%  de las personas tiene su sueldo dolarizado, al menos de manera parcial. Esto representa una disminución del 2% respecto a la <a href="https://sueldos.openqube.io/encuesta-sueldos-2024.01/" target="_blank" rel="noopener noreferrer">encuesta anterior</a>.</p>,
+                                description: <p>El {parseFloat(charts['porcentaje_sueldo_dolarizado'].data.map(item => item.value) * 100).toFixed(0)}%  de las personas tiene su sueldo dolarizado, al menos de manera parcial. Esto representa una disminución del 2% respecto a la <a href="https://sueldos.openqube.io/encuesta-sueldos-2024.01/" target="_blank" rel="noopener noreferrer">encuesta anterior</a>.</p>,
                             },
                         ],
                     },
@@ -1190,7 +1190,7 @@ export default [
                                 component: 'Barh', // graph
                                 props: { ...charts['recibis_algun_tipo_de_bono'], isPercentual: true },
                                 caption: <p>Porcentaje de participantes que han recibido o no, bonos como parte de la compensación. El <strong>
-                                    {parseFloat(charts['recibe_algun_tipo_de_bono'].data.map(item => item.value) * 100).toFixed(1)}</strong>% de quienes respondieron la encuesta reciben algún tipo de bono</p>
+                                    {parseFloat(charts['recibe_algun_tipo_de_bono'].data.map(item => item.value) * 100).toFixed(0)}</strong>% de quienes respondieron la encuesta reciben algún tipo de bono</p>
 
                             },
                         ],
