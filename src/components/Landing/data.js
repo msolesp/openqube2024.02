@@ -150,7 +150,7 @@ export default [
                                 caption: 'Porcentaje de personas encuestadas según años de antigüedad en su compañía actual',
                                 description: (<div>
                                     <p>
-                                        Aproximadamente, el {parseFloat(charts['years_in_company_2_or_less'].data.map(item => item.value) * 100).toFixed(0)}% de las personas encuestadas tiene 2 o menos años en su compañía actual.
+                                        El {parseFloat(charts['years_in_company_2_or_less'].data.map(item => item.value) * 100).toFixed(0)}% de las personas encuestadas tiene 2 o menos años en su compañía actual.
                                     </p>
                                 </div>)
                             },
@@ -167,7 +167,7 @@ export default [
                                 description: (
                                     <div>
                                         <p>
-                                            Aproximadamente, el {parseFloat(charts['years_in_position_2_or_less'].data.map(item => item.value) * 100).toFixed(0)}% de las personas que respondieron la encuesta trabaja hace menos de 3 años en su puesto actual.
+                                            El {parseFloat(charts['years_in_position_2_or_less'].data.map(item => item.value) * 100).toFixed(0)}% de las personas que respondieron la encuesta trabaja hace menos de 3 años en su puesto actual.
                                         </p>
                                     </div>
 
@@ -181,7 +181,7 @@ export default [
                 title: 'Educación',
                 content: (
                     <div>
-                        <p>Del total de respuestas consideradas, solo el {charts['ans_educ_percent']}% de las personas encuestadas respondió la sección de educación. Esto equivale a {charts['ans_educ']} respuestas.</p>
+                        <p>Del total de respuestas consideradas, solo el {charts['ans_educ_percent']}% respondió la sección de educación. Esto equivale a {charts['ans_educ']} respuestas.</p>
                     </div>
                 ),
                 data: [
@@ -316,7 +316,7 @@ export default [
                                 props: { ...historic_charts['historic_salary_medians'], xDataKey: 'publish_date', yDataKeys: ['Pesos Argentinos'], currency: 'AR$' },
                                 caption: <p>Serie histórica de salarios en ARS basada en encuestas anteriores de sysarmy.</p>,
                                 description: <p>
-                                    Desde junio de 2024 hasta enero de 2025 se registró en la República Argentina una inflación de <a target="_blank" rel="noopener noreferrer" href="https://calculadoradeinflacion.com/argentina.html?md=julio&ad=2023&mh=junio&ah=2024&q=100"> 27%</a> según el <a target="_blank" rel="noopener noreferrer" href="https://www.indec.gob.ar/">INDEC</a>. Según los datos históricos de esta encuesta, en aproximadamente el mismo intervalo de tiempo, la mediana salarial aumentó un 34%.
+                                    Desde junio de 2024 hasta enero de 2025 se registró en la República Argentina una inflación de <a target="_blank" rel="noopener noreferrer" href="https://calculadoradeinflacion.com/argentina.html?md=julio&ad=2023&mh=junio&ah=2024&q=100"> 27%</a> según el <a target="_blank" rel="noopener noreferrer" href="https://www.indec.gob.ar/">INDEC</a>. Según los datos históricos de esta encuesta, en aproximadamente el mismo intervalo de tiempo, la mediana salarial aumentó un 35%.
                                     <br></br>
                                     <br></br>
                                 </p>,
@@ -642,8 +642,8 @@ export default [
                 <ul>
                     <li>Prefiero no decir {parseFloat(charts['gender_prefiero_no_decir'].data.map(item => item.value) * 100).toFixed(1)}%</li>
                     <li>No Binarie {parseFloat(charts['gender_no_binarie'].data.map(item => item.value) * 100).toFixed(1)}%</li>
-                    <li>Queer {parseFloat(charts['gender_queer'].data.map(item => item.value) * 100).toFixed(1)}%</li>
-                    <li>Trans {parseFloat(charts['gender_trans'].data.map(item => item.value) * 100).toFixed(1)}%</li>
+                    <li>Queer {parseFloat(charts['gender_queer'].data.map(item => item.value) * 100).toFixed(2)}%</li>
+                    <li>Trans {parseFloat(charts['gender_trans'].data.map(item => item.value) * 100).toFixed(2)}%</li>
                     <li>Lesbiana {parseFloat(charts['gender_lesbiana'].data.map(item => item.value) * 100).toFixed(2)}%</li>
                     <li>Agénero {parseFloat(charts['gender_agenero'].data.map(item => item.value) * 100).toFixed(2)}%</li>
                 </ul>
@@ -776,7 +776,7 @@ export default [
                                     Se observa la evolución salarial por género en pesos argentinos.
                                     <p>
                                     </p>
-                                    Actualmente, por cada peso que gana un hombre cis, una mujer cis gana aproximadamente 82 centavos.
+                                    Actualmente, por cada peso que gana un hombre cis, una mujer cis gana aproximadamente 83 centavos.
                                     <p>
                                         Al analizar el gráfico, es importante tener en cuenta que el {parseFloat(charts['gender_prefiero_no_decir'].data.map(item => item.value) * 100).toFixed(1)}% de las personas de la muestra prefirieron no decir su género.
                                     </p>
@@ -873,7 +873,6 @@ export default [
                 content: <div>
                     <p>
                         En este apartado segmentamos los niveles de educación formal alcanzados y el grado de completitud de cada uno, por género.
-                        Cabe aclarar que excepto para  Mujeres Cis y Hombres Cis, tal como se puede ver en el apartado <a href="#Perfil-de-participantes-Demografia">Demografía</a>, el número de muestras es extremadamente reducido, y es muy posible que lo detallado aquí no sea representativo.
                     </p>
                 </div>,
                 data: [
@@ -1357,7 +1356,7 @@ export default [
                 <h4>Evolución de los salarios en pesos constantes ajustados por IPC</h4>
                 <p>
                     Los salarios históricos se ajustaron a pesos constantes utilizando el Índice de Precios al Consumidor (IPC) publicado por el INDEC, lo que permite eliminar el efecto de la inflación y analizar la evolución del poder adquisitivo real.
-                    Para ello, se definió un período base (mes anterior a la publicación de la encuesta) y se aplicó el IPC como coeficiente de ajuste a cada salario histórico, convirtiéndolo a valores equivalentes en términos de precios actuales.
+                    Para ello, se definió un período base y se aplicó el IPC como coeficiente de ajuste a cada salario histórico, convirtiéndolo a valores equivalentes en términos de precios actuales.
                     El detalle sobre cómo utilizar este índice se encuentra en <a target="_blank" rel="noopener noreferrer" href="https://www.indec.gob.ar/ftp/cuadros/economia/como_usar_indice_precios_2022.pdf">en este documento oficial de INDEC.</a>
 
                 </p>
