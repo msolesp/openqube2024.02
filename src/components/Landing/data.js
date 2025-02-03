@@ -64,7 +64,7 @@ export default [
                         (basado en los trabajos previos de <a className='author-name' href='https://www.linkedin.com/in/nadiakazlauskas/' target="_blank" rel="noopener noreferrer">Nadia Kazlauskas</a>, <a className='author-name' href='https://www.linkedin.com/in/fernandezpablo85/' target="_blank" rel="noopener noreferrer">Pablo Fernandez</a>, <a className='author-name' href='https://twitter.com/luscastro' target="_blank" rel="noopener noreferrer">Luciana Castro</a>, <a className='author-name' href='https://twitter.com/gerardobort' target="_blank" rel="noopener noreferrer">Gerardo Bort</a>, <a className='author-name' href='https://ar.linkedin.com/in/pcasas' target="_blank" rel="noopener noreferrer">Pablo Casas</a>, <a className='author-name' href='https://ar.linkedin.com/in/leonardo-genzano-1b275193/' target="_blank" rel="noopener noreferrer">Leonardo Genzano</a>, <a className='author-name' href='https://twitter.com/cocodibuja' target="_blank" rel="noopener noreferrer">Nico Quiroz</a>, <a className='author-name' href='https://twitter.com/larilopezcalvo' target="_blank" rel="noopener noreferrer">Lara López Calvo</a> y <a className='author-name' href='https://www.linkedin.com/in/benitezjuanm/' target="_blank" rel="noopener noreferrer">Juan Manuel Benítez</a>)
                     </small>
                     <a href="https://sysar.my/discord" target="_blank" rel="noopener noreferrer">
-                        <img src="/discord-683x90.jpg" style={{ "margin-top": "20px", width: "100%", height: "auto" }}></img>
+                        <img src="discord-683x90.jpg" style={{ "margin-top": "20px", width: "100%", height: "auto" }}></img>
                     </a>
                 </div>
             </div>
