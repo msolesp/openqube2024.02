@@ -418,10 +418,8 @@ export default [
                                 caption: 'Mediana salarial según sueldos dolarizados y experiencia.',
                                 description: <div>
                                     <p>
-                                        Las medianas salariales para las diferentes experiencias varían entre un {charts["dif_dolarizado_min"]}% y un {charts["dif_dolarizado_max"]}% según si el sueldo se encuentra (al menos en una parte) dolarizado o no. Para más detalle ver <a href="#Metodologia">Metodología</a>.
-                                    </p>
-                                    <p>
-                                        En <a href="#Trabajo-Tipos-de-contrato-Que-porcentaje-tiene-su-sueldo-dolarizado">este gráfico</a> se muestra el porcentaje de personas que gozan de este beneficio.
+                                        Las medianas salariales para puestos Semi-Senior y Senior pueden variar hasta un {charts["dif_dolarizado_max"]}% según si el sueldo se encuentra (al menos en una parte) dolarizado o no. En cambio, para roles Junior, no se observa una diferencia significativa. Para más detalle ver <a href="#Metodologia">Metodología</a>.
+                                        <p>En <a href="#Trabajo-Tipos-de-contrato-Que-porcentaje-tiene-su-sueldo-dolarizado">este gráfico</a> se muestra el porcentaje de personas que gozan de este beneficio.</p>
                                     </p>
                                 </div>,
                             },
